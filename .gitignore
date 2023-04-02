@@ -3,3 +3,5 @@ venv
 bin
 lib
 __pycache__
+.DS_Store
+*.sqlite3

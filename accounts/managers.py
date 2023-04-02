@@ -7,3 +7,4 @@ class UserManager(BaseManager):
     ):
         username = email if not username else username
         return super().create_superuser(username, email, password, **extra_fields)
+

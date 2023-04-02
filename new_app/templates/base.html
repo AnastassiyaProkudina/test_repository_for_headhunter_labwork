@@ -29,6 +29,7 @@
             {% else %}
                 <li>
                     <a href="{% url 'login' %}?next={{ request.get_full_path }}" class="btn btn-primary">Войти</a>
+                    <a href="{% url 'register' %}" class="btn btn-primary">Зарегистрироваться</a>
                 </li>
             {% endif %}
         </ul>
