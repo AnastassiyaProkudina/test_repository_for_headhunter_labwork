@@ -1,5 +1,7 @@
 from django import forms
 
+from new_app.models import Vacancy
+
 
 class LoginForm(forms.Form):
     email = forms.CharField(
@@ -10,3 +12,14 @@ class LoginForm(forms.Form):
         required=True,
         widget=forms.PasswordInput(),
     )
+
+
+class VacancyForm(forms.ModelForm):
+
+    class Meta:
+        model = Vacancy
+        fields = ("text", "author")
+        labels = {
+            'author': 'Автор',
+            'text': 'Текст',
+        }
